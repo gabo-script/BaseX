@@ -1,6 +1,6 @@
 while True:
     print('''
-        Bienvenido a basedec
+        Bienvenido a BaseX
         Base10 a baseX(1) | BaseX a base10(2) | BaseX a baseY(3) | Salir(4)
     ''')
     opcion = input('Elija una opcion >> ')

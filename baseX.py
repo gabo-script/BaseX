@@ -46,13 +46,13 @@ while True:
         num = input(f'Ingresa un numero en base {baseX} >> ')
         maximo = int(max(list(num)))
         decimal = 0
-        baseY = int(input('Ingrese la nueva base (max 10) >> '))
         resultado = ''
 
         if num.isdecimal() and baseX <= 10 and baseX > maximo:
             for i in range(0, len(num)):
                 decimal = decimal + (int(num[-(i + 1)]) * (baseX ** i))
 
+            baseY = int(input('Ingrese la nueva base (max 10) >> '))
             while decimal >= baseY:
                 residuo = decimal % baseY
                 resultado = str(residuo) + resultado

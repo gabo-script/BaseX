@@ -3,7 +3,7 @@ while True:
         Bienvenido a BaseX
         Base10 a baseX(1) | BaseX a base10(2) | BaseX a baseY(3) | Salir(4)
     ''')
-    opcion = input('Elija una opcion >> ')
+    opcion = input('Elija una opcion: ')
 
     if opcion == '1':
         decimal = int(input('Ingrese un numero en base 10 >> '))
@@ -17,7 +17,7 @@ while True:
                 decimal = decimal // base
 
             resultado = str(decimal) + resultado
-            print(f'El numero equivalente en base {base} es >> {resultado}')
+            print(f'El numero equivalente en base {base} es {resultado}')
             break
 
         else:
@@ -34,7 +34,7 @@ while True:
             for i in range(0, len(num)):
                 decimal = decimal + (int(num[-(i + 1)]) * (base ** i))
 
-            print('El numero decimal equivalente es >>', decimal)
+            print(f'El numero decimal equivalente es {decimal}')
             break
 
         else:
@@ -59,7 +59,7 @@ while True:
                 decimal = decimal // baseY
 
             resultado = str(decimal) + resultado
-            print(f'El numero equivalente en base {baseY} es >> {resultado}')
+            print(f'El numero equivalente en base {baseY} es {resultado}')
             break
 
         else:

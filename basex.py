@@ -19,35 +19,35 @@ def main():
             Base10 a baseX(1) | BaseX a base10(2) | BaseX a baseY(3) | Salir(4)
         """
         )
-        OPCION = input("Elija una opcion: ")
+        opcion = input("Elija una opcion: ")
 
-        if OPCION == "1":
+        if opcion == "1":
             decimal = int(input("Ingrese un numero en base 10 >> "))
-            BASE = int(input("Ingrese la base (max 10) >> "))
+            base = int(input("Ingrese la base (max 10) >> "))
             resultado = ""
 
-            if str(decimal).isdecimal() and BASE <= 10:
-                while decimal >= BASE:
-                    residuo = decimal % BASE
+            if str(decimal).isdecimal() and base <= 10:
+                while decimal >= base:
+                    residuo = decimal % base
                     resultado = str(residuo) + resultado
-                    decimal = decimal // BASE
+                    decimal = decimal // base
 
                 resultado = str(decimal) + resultado
-                print(f"El numero equivalente en base {BASE} es {resultado}")
+                print(f"El numero equivalente en base {base} es {resultado}")
                 break
 
             print("No es un dato válido")
             break
 
-        if OPCION == "2":
-            BASE = int(input("Ingrese la base (max 10) >> "))
-            NUM = input(f"Ingresa un numero en base {BASE} >> ")
-            MAXIMO = int(max(list(NUM)))
+        if opcion == "2":
+            base = int(input("Ingrese la base (max 10) >> "))
+            num = input(f"Ingresa un numero en base {base} >> ")
+            maximo = int(max(list(num)))
             decimal = 0
 
-            if NUM.isdecimal() and MAXIMO < BASE <= 10:
-                for i in range(0, len(NUM)):
-                    decimal = decimal + (int(NUM[-(i + 1)]) * (BASE ** i))
+            if num.isdecimal() and maximo < base <= 10:
+                for i in range(0, len(num)):
+                    decimal = decimal + (int(num[-(i + 1)]) * (base ** i))
 
                 print(f"El numero decimal equivalente es {decimal}")
                 break
@@ -55,32 +55,32 @@ def main():
             print("No es un dato válido")
             break
 
-        if OPCION == "3":
-            BASE_X = int(input("Ingrese la base (max 10) >> "))
-            NUM = input(f"Ingresa un numero en base {BASE_X} >> ")
-            MAXIMO = int(max(list(NUM)))
+        if opcion == "3":
+            base_x = int(input("Ingrese la base (max 10) >> "))
+            num = input(f"Ingresa un numero en base {base_x} >> ")
+            maximo = int(max(list(num)))
             decimal = 0
             resultado = ""
 
-            if NUM.isdecimal() and MAXIMO < BASE_X <= 10:
-                for i in range(0, len(NUM)):
-                    decimal = decimal + (int(NUM[-(i + 1)]) * (BASE_X ** i))
+            if num.isdecimal() and maximo < base_x <= 10:
+                for i in range(0, len(num)):
+                    decimal = decimal + (int(num[-(i + 1)]) * (base_x ** i))
 
-                BASE_Y = int(input("Ingrese la nueva base (max 10) >> "))
+                base_y = int(input("Ingrese la nueva base (max 10) >> "))
 
-                while decimal >= BASE_Y:
-                    residuo = decimal % BASE_Y
+                while decimal >= base_y:
+                    residuo = decimal % base_y
                     resultado = str(residuo) + resultado
-                    decimal = decimal // BASE_Y
+                    decimal = decimal // base_y
 
                 resultado = str(decimal) + resultado
-                print(f"El numero equivalente en base {BASE_Y} es {resultado}")
+                print(f"El numero equivalente en base {base_y} es {resultado}")
                 break
 
             print("No es un dato válido")
             break
 
-        if OPCION == "4":
+        if opcion == "4":
             print("El programa ha finalizado")
             break
 
